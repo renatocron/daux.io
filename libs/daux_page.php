@@ -110,7 +110,7 @@
 
         private function initialize_from_file($file, $params) {
             $this->title = $file->title;
-            $this->filename = $file->name;
+            $this->filename = utf8_decode($file->name);
             $this->path = $file->local_path;
             $this->mtime = $file->last_modified;
             $this->params = $params;
